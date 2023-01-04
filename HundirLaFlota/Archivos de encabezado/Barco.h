@@ -10,13 +10,14 @@
 
 #include <stdio.h>
 #include <iostream>
+#include "Casilla.h"
 
 using namespace std;
 
 class Barco {
 protected:
     bool hundido;
-    //Casilla* casillasBarco;
+    Casilla* casillasBarco;
     int longitud;
     bool vertical;
 public:
