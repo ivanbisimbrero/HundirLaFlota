@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CCC891992965FCA600798F68 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CCC891982965FCA600798F68 /* main.c */; };
-		CCC891A22965FCC800798F68 /* Barco.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCC891A02965FCC800798F68 /* Barco.cpp */; };
-		CCC891A52965FE2700798F68 /* Casilla.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCC891A32965FE2700798F68 /* Casilla.cpp */; };
-		CCC891A92966018000798F68 /* Tablero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCC891A72966018000798F68 /* Tablero.cpp */; };
+		CC1041532966150D0035C7AA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC1041522966150D0035C7AA /* main.cpp */; };
+		CC10415A296615630035C7AA /* Barco.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC104159296615630035C7AA /* Barco.cpp */; };
+		CC10415C296615690035C7AA /* Casilla.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC10415B296615690035C7AA /* Casilla.cpp */; };
+		CC10415E2966156E0035C7AA /* Tablero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC10415D2966156E0035C7AA /* Tablero.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CCC891932965FCA600798F68 /* CopyFiles */ = {
+		CC10414D2966150D0035C7AA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -26,19 +26,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CCC891952965FCA600798F68 /* HundirLaFlota */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HundirLaFlota; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCC891982965FCA600798F68 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		CCC891A02965FCC800798F68 /* Barco.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Barco.cpp; sourceTree = "<group>"; };
-		CCC891A12965FCC800798F68 /* Barco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Barco.h; sourceTree = "<group>"; };
-		CCC891A32965FE2700798F68 /* Casilla.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Casilla.cpp; sourceTree = "<group>"; };
-		CCC891A42965FE2700798F68 /* Casilla.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Casilla.h; sourceTree = "<group>"; };
-		CCC891A62965FEBB00798F68 /* Fila.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fila.h; sourceTree = "<group>"; };
-		CCC891A72966018000798F68 /* Tablero.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tablero.cpp; sourceTree = "<group>"; };
-		CCC891A82966018000798F68 /* Tablero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tablero.h; sourceTree = "<group>"; };
+		CC10414F2966150D0035C7AA /* HundirLaFlota */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HundirLaFlota; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC1041522966150D0035C7AA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CC104159296615630035C7AA /* Barco.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Barco.cpp; sourceTree = "<group>"; };
+		CC10415B296615690035C7AA /* Casilla.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Casilla.cpp; sourceTree = "<group>"; };
+		CC10415D2966156E0035C7AA /* Tablero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tablero.cpp; sourceTree = "<group>"; };
+		CC104166296618DC0035C7AA /* Barco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Barco.h; sourceTree = "<group>"; };
+		CC104167296618E40035C7AA /* Casilla.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Casilla.h; sourceTree = "<group>"; };
+		CC104168296618EF0035C7AA /* Fila.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fila.h; sourceTree = "<group>"; };
+		CC104169296619000035C7AA /* Tablero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tablero.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CCC891922965FCA600798F68 /* Frameworks */ = {
+		CC10414C2966150D0035C7AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,41 +48,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CCC8918C2965FCA600798F68 = {
+		CC1041462966150D0035C7AA = {
 			isa = PBXGroup;
 			children = (
-				CCC8919F2965FCB500798F68 /* Archivos de encabezado */,
-				CCC891972965FCA600798F68 /* HundirLaFlota */,
-				CCC891962965FCA600798F68 /* Products */,
+				CC104165296618A30035C7AA /* Archivos de encabezado */,
+				CC1041512966150D0035C7AA /* HundirLaFlota */,
+				CC1041502966150D0035C7AA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CCC891962965FCA600798F68 /* Products */ = {
+		CC1041502966150D0035C7AA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CCC891952965FCA600798F68 /* HundirLaFlota */,
+				CC10414F2966150D0035C7AA /* HundirLaFlota */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CCC891972965FCA600798F68 /* HundirLaFlota */ = {
+		CC1041512966150D0035C7AA /* HundirLaFlota */ = {
 			isa = PBXGroup;
 			children = (
-				CCC891982965FCA600798F68 /* main.c */,
-				CCC891A02965FCC800798F68 /* Barco.cpp */,
-				CCC891A32965FE2700798F68 /* Casilla.cpp */,
-				CCC891A72966018000798F68 /* Tablero.cpp */,
+				CC10415D2966156E0035C7AA /* Tablero.cpp */,
+				CC10415B296615690035C7AA /* Casilla.cpp */,
+				CC104159296615630035C7AA /* Barco.cpp */,
+				CC1041522966150D0035C7AA /* main.cpp */,
 			);
 			path = HundirLaFlota;
 			sourceTree = "<group>";
 		};
-		CCC8919F2965FCB500798F68 /* Archivos de encabezado */ = {
+		CC104165296618A30035C7AA /* Archivos de encabezado */ = {
 			isa = PBXGroup;
 			children = (
-				CCC891A12965FCC800798F68 /* Barco.h */,
-				CCC891A42965FE2700798F68 /* Casilla.h */,
-				CCC891A62965FEBB00798F68 /* Fila.h */,
-				CCC891A82966018000798F68 /* Tablero.h */,
+				CC104166296618DC0035C7AA /* Barco.h */,
+				CC104167296618E40035C7AA /* Casilla.h */,
+				CC104168296618EF0035C7AA /* Fila.h */,
+				CC104169296619000035C7AA /* Tablero.h */,
 			);
 			path = "Archivos de encabezado";
 			sourceTree = "<group>";
@@ -90,13 +90,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CCC891942965FCA600798F68 /* HundirLaFlota */ = {
+		CC10414E2966150D0035C7AA /* HundirLaFlota */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCC8919C2965FCA600798F68 /* Build configuration list for PBXNativeTarget "HundirLaFlota" */;
+			buildConfigurationList = CC1041562966150D0035C7AA /* Build configuration list for PBXNativeTarget "HundirLaFlota" */;
 			buildPhases = (
-				CCC891912965FCA600798F68 /* Sources */,
-				CCC891922965FCA600798F68 /* Frameworks */,
-				CCC891932965FCA600798F68 /* CopyFiles */,
+				CC10414B2966150D0035C7AA /* Sources */,
+				CC10414C2966150D0035C7AA /* Frameworks */,
+				CC10414D2966150D0035C7AA /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -104,24 +104,24 @@
 			);
 			name = HundirLaFlota;
 			productName = HundirLaFlota;
-			productReference = CCC891952965FCA600798F68 /* HundirLaFlota */;
+			productReference = CC10414F2966150D0035C7AA /* HundirLaFlota */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CCC8918D2965FCA600798F68 /* Project object */ = {
+		CC1041472966150D0035C7AA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					CCC891942965FCA600798F68 = {
+					CC10414E2966150D0035C7AA = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = CCC891902965FCA600798F68 /* Build configuration list for PBXProject "HundirLaFlota" */;
+			buildConfigurationList = CC10414A2966150D0035C7AA /* Build configuration list for PBXProject "HundirLaFlota" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -129,32 +129,32 @@
 				en,
 				Base,
 			);
-			mainGroup = CCC8918C2965FCA600798F68;
-			productRefGroup = CCC891962965FCA600798F68 /* Products */;
+			mainGroup = CC1041462966150D0035C7AA;
+			productRefGroup = CC1041502966150D0035C7AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CCC891942965FCA600798F68 /* HundirLaFlota */,
+				CC10414E2966150D0035C7AA /* HundirLaFlota */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CCC891912965FCA600798F68 /* Sources */ = {
+		CC10414B2966150D0035C7AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCC891992965FCA600798F68 /* main.c in Sources */,
-				CCC891A92966018000798F68 /* Tablero.cpp in Sources */,
-				CCC891A22965FCC800798F68 /* Barco.cpp in Sources */,
-				CCC891A52965FE2700798F68 /* Casilla.cpp in Sources */,
+				CC1041532966150D0035C7AA /* main.cpp in Sources */,
+				CC10415E2966156E0035C7AA /* Tablero.cpp in Sources */,
+				CC10415A296615630035C7AA /* Barco.cpp in Sources */,
+				CC10415C296615690035C7AA /* Casilla.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		CCC8919A2965FCA600798F68 /* Debug */ = {
+		CC1041542966150D0035C7AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -212,7 +212,7 @@
 			};
 			name = Debug;
 		};
-		CCC8919B2965FCA600798F68 /* Release */ = {
+		CC1041552966150D0035C7AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -263,7 +263,7 @@
 			};
 			name = Release;
 		};
-		CCC8919D2965FCA600798F68 /* Debug */ = {
+		CC1041572966150D0035C7AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -271,7 +271,7 @@
 			};
 			name = Debug;
 		};
-		CCC8919E2965FCA600798F68 /* Release */ = {
+		CC1041582966150D0035C7AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -282,25 +282,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CCC891902965FCA600798F68 /* Build configuration list for PBXProject "HundirLaFlota" */ = {
+		CC10414A2966150D0035C7AA /* Build configuration list for PBXProject "HundirLaFlota" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CCC8919A2965FCA600798F68 /* Debug */,
-				CCC8919B2965FCA600798F68 /* Release */,
+				CC1041542966150D0035C7AA /* Debug */,
+				CC1041552966150D0035C7AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCC8919C2965FCA600798F68 /* Build configuration list for PBXNativeTarget "HundirLaFlota" */ = {
+		CC1041562966150D0035C7AA /* Build configuration list for PBXNativeTarget "HundirLaFlota" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CCC8919D2965FCA600798F68 /* Debug */,
-				CCC8919E2965FCA600798F68 /* Release */,
+				CC1041572966150D0035C7AA /* Debug */,
+				CC1041582966150D0035C7AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CCC8918D2965FCA600798F68 /* Project object */;
+	rootObject = CC1041472966150D0035C7AA /* Project object */;
 }

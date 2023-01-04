@@ -9,7 +9,6 @@
 #define Casilla_h
 
 #include <stdio.h>
-#include <iostream>
 #include "Fila.h"
 
 using namespace std;
@@ -21,9 +20,16 @@ private:
     Fila coordenadaY;
     int coordenadaX;
 public:
+    Casilla();
+    Casilla(int, int);
+    Casilla(const Casilla&);
+    void modificarCoordenadas(int, int);
     bool comprobarOcupacion() {return hayBarco;}
     void marcarCasillaDisparada();
+    void setBarco();
     bool comprobarDisparo() {return disparada;}
+    Casilla& operator=(const Casilla&);
+    Fila getFila(int);
 };
 
 #endif /* Casilla_h */

@@ -17,10 +17,12 @@ using namespace std;
 class Barco {
 protected:
     bool hundido;
+    Casilla coordenadaInicial;
     Casilla* casillasBarco;
     int longitud;
     bool vertical;
 public:
+    Barco();
     bool comprobarHundido();
 };
 

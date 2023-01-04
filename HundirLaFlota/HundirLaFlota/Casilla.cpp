@@ -7,6 +7,81 @@
 
 #include "Casilla.h"
 
+Casilla::Casilla() {
+    disparada = false;
+    hayBarco = false;
+    coordenadaY = A;
+    coordenadaX = 0;
+}
+
+Casilla::Casilla(int f, int col) {
+    disparada = false;
+    hayBarco = false;
+    coordenadaY = getFila(f);
+    coordenadaX = col;
+}
+
+Casilla::Casilla(const Casilla& c) {
+    disparada = c.disparada;
+    hayBarco = c.hayBarco;
+    coordenadaY = c.coordenadaY;
+    coordenadaX = c.coordenadaX;
+}
+
+void Casilla::modificarCoordenadas(int f, int col) {
+    coordenadaY = getFila(f);
+    coordenadaX = col;
+}
+
 void Casilla::marcarCasillaDisparada() {
     disparada = true;
+}
+
+void Casilla::setBarco() {
+    hayBarco = true;
+}
+
+Casilla& Casilla::operator=(const Casilla& opDrcha) {
+    disparada = opDrcha.disparada;
+    hayBarco = opDrcha.hayBarco;
+    coordenadaY = opDrcha.coordenadaY;
+    coordenadaX = opDrcha.coordenadaX;
+    return *this;
+}
+
+Fila Casilla::getFila(int num) {
+    Fila aux = A;
+    switch (num) {
+        case 0:
+            aux = A;
+            break;
+        case 1:
+            aux = B;
+            break;
+        case 2:
+            aux = C;
+            break;
+        case 3:
+            aux = D;
+            break;
+        case 4:
+            aux = E;
+            break;
+        case 5:
+            aux = F;
+            break;
+        case 6:
+            aux = G;
+            break;
+        case 7:
+            aux = H;
+            break;
+        case 8:
+            aux = I;
+            break;
+        case 9:
+            aux = J;
+            break;
+    }
+    return aux;
 }

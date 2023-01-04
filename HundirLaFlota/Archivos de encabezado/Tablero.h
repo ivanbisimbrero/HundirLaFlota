@@ -9,5 +9,18 @@
 #define Tablero_h
 
 #include <stdio.h>
+#include "Casilla.h"
+
+class Tablero {
+private:
+    Casilla tablero[10][10];
+public:
+    Tablero();
+    void colocarBarco(string, Fila, int, bool);
+    void marcarCoordenada(Fila, int);
+    bool comprobarCoordenada(Fila, int);
+    bool comprobarDisparo(Fila, int);
+};
+
 
 #endif /* Tablero_h */
