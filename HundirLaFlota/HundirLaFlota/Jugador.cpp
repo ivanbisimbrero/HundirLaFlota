@@ -10,5 +10,6 @@
 Jugador::Jugador() {
     turno = false;
     tablerosJugador = new Tablero[2];
-    barcos = new Barco[5];
+    //TODO: arreglar array de barcos
+    //barcos = new Barco[5];
 }

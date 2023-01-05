@@ -25,7 +25,7 @@ public:
     Barco();
     Barco(Casilla, int, bool);
     Barco(const Barco&);
-    bool comprobarHundido();
+    virtual bool comprobarHundido() = 0;
     Barco& operator=(const Barco&);
     void mostrarCasillas();
 };

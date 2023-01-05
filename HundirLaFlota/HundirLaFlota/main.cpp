@@ -14,8 +14,8 @@ int main(int argc, const char * argv[]) {
     
     Tablero miTablero;
     Casilla aux(1, 2);
-    Barco prueba(aux, 4, true);
-    prueba.mostrarCasillas();
+    //Barco prueba(aux, 4, true);
+    //prueba.mostrarCasillas();
     
     return 0;
 }

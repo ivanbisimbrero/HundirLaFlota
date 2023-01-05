@@ -16,7 +16,7 @@ class Jugador {
 private:
     bool turno;
     Tablero* tablerosJugador;
-    Barco* barcos;
+    Barco** barcos;
 public:
     Jugador();
     void disparar(Fila, int);

@@ -12,6 +12,11 @@
 		CC10415A296615630035C7AA /* Barco.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC104159296615630035C7AA /* Barco.cpp */; };
 		CC10415C296615690035C7AA /* Casilla.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC10415B296615690035C7AA /* Casilla.cpp */; };
 		CC10415E2966156E0035C7AA /* Tablero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC10415D2966156E0035C7AA /* Tablero.cpp */; };
+		CC628C2929674F0000B36366 /* Portaaviones.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC628C2729674F0000B36366 /* Portaaviones.cpp */; };
+		CC628C2C29674FB200B36366 /* Acorazado.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC628C2A29674FB200B36366 /* Acorazado.cpp */; };
+		CC628C2F29674FBC00B36366 /* Submarino.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC628C2D29674FBC00B36366 /* Submarino.cpp */; };
+		CC628C3229674FC600B36366 /* Patrullero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC628C3029674FC600B36366 /* Patrullero.cpp */; };
+		CC628C3529674FD100B36366 /* Buque.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC628C3329674FD100B36366 /* Buque.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +43,16 @@
 		CC104167296618E40035C7AA /* Casilla.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Casilla.h; sourceTree = "<group>"; };
 		CC104168296618EF0035C7AA /* Fila.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fila.h; sourceTree = "<group>"; };
 		CC104169296619000035C7AA /* Tablero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tablero.h; sourceTree = "<group>"; };
+		CC628C2729674F0000B36366 /* Portaaviones.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Portaaviones.cpp; sourceTree = "<group>"; };
+		CC628C2829674F0000B36366 /* Portaaviones.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Portaaviones.h; sourceTree = "<group>"; };
+		CC628C2A29674FB200B36366 /* Acorazado.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Acorazado.cpp; sourceTree = "<group>"; };
+		CC628C2B29674FB200B36366 /* Acorazado.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Acorazado.h; sourceTree = "<group>"; };
+		CC628C2D29674FBC00B36366 /* Submarino.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Submarino.cpp; sourceTree = "<group>"; };
+		CC628C2E29674FBC00B36366 /* Submarino.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Submarino.h; sourceTree = "<group>"; };
+		CC628C3029674FC600B36366 /* Patrullero.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Patrullero.cpp; sourceTree = "<group>"; };
+		CC628C3129674FC600B36366 /* Patrullero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Patrullero.h; sourceTree = "<group>"; };
+		CC628C3329674FD100B36366 /* Buque.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Buque.cpp; sourceTree = "<group>"; };
+		CC628C3429674FD100B36366 /* Buque.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Buque.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +91,11 @@
 				CC104159296615630035C7AA /* Barco.cpp */,
 				CC1041522966150D0035C7AA /* main.cpp */,
 				CC06074F2966E006009D29EA /* Jugador.cpp */,
+				CC628C2729674F0000B36366 /* Portaaviones.cpp */,
+				CC628C2A29674FB200B36366 /* Acorazado.cpp */,
+				CC628C2D29674FBC00B36366 /* Submarino.cpp */,
+				CC628C3029674FC600B36366 /* Patrullero.cpp */,
+				CC628C3329674FD100B36366 /* Buque.cpp */,
 			);
 			path = HundirLaFlota;
 			sourceTree = "<group>";
@@ -83,11 +103,16 @@
 		CC104165296618A30035C7AA /* Archivos de encabezado */ = {
 			isa = PBXGroup;
 			children = (
-				CC104166296618DC0035C7AA /* Barco.h */,
 				CC104167296618E40035C7AA /* Casilla.h */,
 				CC104168296618EF0035C7AA /* Fila.h */,
 				CC104169296619000035C7AA /* Tablero.h */,
 				CC0607502966E006009D29EA /* Jugador.h */,
+				CC104166296618DC0035C7AA /* Barco.h */,
+				CC628C2829674F0000B36366 /* Portaaviones.h */,
+				CC628C2B29674FB200B36366 /* Acorazado.h */,
+				CC628C2E29674FBC00B36366 /* Submarino.h */,
+				CC628C3129674FC600B36366 /* Patrullero.h */,
+				CC628C3429674FD100B36366 /* Buque.h */,
 			);
 			path = "Archivos de encabezado";
 			sourceTree = "<group>";
@@ -153,7 +178,12 @@
 				CC10415E2966156E0035C7AA /* Tablero.cpp in Sources */,
 				CC0607512966E006009D29EA /* Jugador.cpp in Sources */,
 				CC10415A296615630035C7AA /* Barco.cpp in Sources */,
+				CC628C2929674F0000B36366 /* Portaaviones.cpp in Sources */,
+				CC628C3229674FC600B36366 /* Patrullero.cpp in Sources */,
+				CC628C3529674FD100B36366 /* Buque.cpp in Sources */,
 				CC10415C296615690035C7AA /* Casilla.cpp in Sources */,
+				CC628C2F29674FBC00B36366 /* Submarino.cpp in Sources */,
+				CC628C2C29674FB200B36366 /* Acorazado.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
