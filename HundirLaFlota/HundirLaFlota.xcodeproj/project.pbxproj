@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC0607512966E006009D29EA /* Jugador.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC06074F2966E006009D29EA /* Jugador.cpp */; };
 		CC1041532966150D0035C7AA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC1041522966150D0035C7AA /* main.cpp */; };
 		CC10415A296615630035C7AA /* Barco.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC104159296615630035C7AA /* Barco.cpp */; };
 		CC10415C296615690035C7AA /* Casilla.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC10415B296615690035C7AA /* Casilla.cpp */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC06074F2966E006009D29EA /* Jugador.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Jugador.cpp; sourceTree = "<group>"; };
+		CC0607502966E006009D29EA /* Jugador.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Jugador.h; sourceTree = "<group>"; };
 		CC10414F2966150D0035C7AA /* HundirLaFlota */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HundirLaFlota; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1041522966150D0035C7AA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CC104159296615630035C7AA /* Barco.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Barco.cpp; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 				CC10415B296615690035C7AA /* Casilla.cpp */,
 				CC104159296615630035C7AA /* Barco.cpp */,
 				CC1041522966150D0035C7AA /* main.cpp */,
+				CC06074F2966E006009D29EA /* Jugador.cpp */,
 			);
 			path = HundirLaFlota;
 			sourceTree = "<group>";
@@ -83,6 +87,7 @@
 				CC104167296618E40035C7AA /* Casilla.h */,
 				CC104168296618EF0035C7AA /* Fila.h */,
 				CC104169296619000035C7AA /* Tablero.h */,
+				CC0607502966E006009D29EA /* Jugador.h */,
 			);
 			path = "Archivos de encabezado";
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			files = (
 				CC1041532966150D0035C7AA /* main.cpp in Sources */,
 				CC10415E2966156E0035C7AA /* Tablero.cpp in Sources */,
+				CC0607512966E006009D29EA /* Jugador.cpp in Sources */,
 				CC10415A296615630035C7AA /* Barco.cpp in Sources */,
 				CC10415C296615690035C7AA /* Casilla.cpp in Sources */,
 			);

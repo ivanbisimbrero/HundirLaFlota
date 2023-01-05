@@ -16,10 +16,14 @@ private:
     Casilla tablero[10][10];
 public:
     Tablero();
+    Tablero(const Tablero&);
+    bool comprobarProximidad(string, Fila, int, bool);
     void colocarBarco(string, Fila, int, bool);
     void marcarCoordenada(Fila, int);
     bool comprobarCoordenada(Fila, int);
     bool comprobarDisparo(Fila, int);
+    int getIntFila(Fila);
+    Tablero& operator=(const Tablero&);
 };
 
 

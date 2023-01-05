@@ -18,12 +18,16 @@ class Barco {
 protected:
     bool hundido;
     Casilla coordenadaInicial;
-    Casilla* casillasBarco;
     int longitud;
+    Casilla* casillasBarco;
     bool vertical;
 public:
     Barco();
+    Barco(Casilla, int, bool);
+    Barco(const Barco&);
     bool comprobarHundido();
+    Barco& operator=(const Barco&);
+    void mostrarCasillas();
 };
 
 #endif /* Barco_h */

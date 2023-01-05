@@ -85,3 +85,48 @@ Fila Casilla::getFila(int num) {
     }
     return aux;
 }
+
+int Casilla::getIntFila() {
+    int aux;
+    switch(coordenadaY) {
+        case A:
+            aux = 0;
+            break;
+        case B:
+            aux = 1;
+            break;
+        case C:
+            aux = 2;
+            break;
+        case D:
+            aux = 3;
+            break;
+        case E:
+            aux = 4;
+            break;
+        case F:
+            aux = 5;
+            break;
+        case G:
+            aux = 6;
+            break;
+        case H:
+            aux = 7;
+            break;
+        case I:
+            aux = 8;
+            break;
+        case J:
+            aux = 9;
+            break;
+    }
+    return aux;
+}
+
+int Casilla::getColumna() {
+    return coordenadaX;
+}
+
+void Casilla::mostrar() {
+    cout << "(" << getIntFila() << " ," << coordenadaX << ")" << endl;
+}

@@ -30,6 +30,9 @@ public:
     bool comprobarDisparo() {return disparada;}
     Casilla& operator=(const Casilla&);
     Fila getFila(int);
+    int getIntFila();
+    int getColumna();
+    void mostrar();
 };
 
 #endif /* Casilla_h */
