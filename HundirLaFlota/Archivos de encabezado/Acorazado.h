@@ -15,7 +15,10 @@ class Acorazado : public Barco {
 public:
     Acorazado();
     Acorazado(Casilla, bool);
+    Acorazado(const Acorazado&);
     bool comprobarHundido();
+    Casilla getCoordenadaInicial() {return coordenadaInicial;}
+    Acorazado& operator=(const Acorazado&);
 };
 
 #endif /* Acorazado_h */

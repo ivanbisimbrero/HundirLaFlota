@@ -15,7 +15,10 @@ class Patrullero : public Barco {
 public:
     Patrullero();
     Patrullero(Casilla, bool);
+    Patrullero(const Patrullero&);
     bool comprobarHundido();
+    Casilla getCoordenadaInicial() {return coordenadaInicial;}
+    Patrullero& operator=(const Patrullero&);
 };
 
 #endif /* Patrullero_h */

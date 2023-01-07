@@ -15,7 +15,10 @@ class Submarino : public Barco {
 public:
     Submarino();
     Submarino(Casilla, bool);
+    Submarino(const Submarino&);
     bool comprobarHundido();
+    Casilla getCoordenadaInicial() {return coordenadaInicial;}
+    Submarino& operator=(const Submarino&);
 };
 
 #endif /* Submarino_h */

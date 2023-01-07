@@ -15,7 +15,10 @@ class Buque : public Barco {
 public:
     Buque();
     Buque(Casilla, bool);
+    Buque(const Buque&);
     bool comprobarHundido();
+    Casilla getCoordenadaInicial() {return coordenadaInicial;}
+    Buque& operator=(const Buque&);
 };
 
 #endif /* Buque_h */

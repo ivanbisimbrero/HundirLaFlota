@@ -59,10 +59,6 @@ Barco::Barco(const Barco& b) {
     vertical = b.vertical;
 }
 
-bool Barco::comprobarHundido() {
-    return hundido;
-}
-
 Barco& Barco::operator=(const Barco& opDrcha) {
     hundido = opDrcha.hundido;
     coordenadaInicial = opDrcha.coordenadaInicial;

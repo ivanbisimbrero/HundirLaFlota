@@ -6,3 +6,47 @@
 //
 
 #include "Patrullero.h"
+
+Patrullero::Patrullero() : Barco(Casilla(0,1), 2, true) {}
+
+Patrullero::Patrullero(Casilla c, bool vert) : Barco(c, 2, vert) {}
+
+Patrullero::Patrullero(const Patrullero& p) {
+    hundido = p.hundido;
+    coordenadaInicial = p.coordenadaInicial;
+    longitud = p.longitud;
+    casillasBarco = new Casilla[longitud];
+    for(int i = 0; i < longitud; i++) {
+        casillasBarco[i] = p.casillasBarco[i];
+    }
+    vertical = p.vertical;
+}
+
+bool Patrullero::comprobarHundido() {
+    bool comprobacion = true;
+    for(int i = 0; i < longitud; i++) {
+        if(!(casillasBarco[i].comprobarDisparo())) {
+            comprobacion = false;
+        }
+    }
+    if(comprobacion) {
+        hundido = true;
+        return hundido;
+    }
+    else {
+        return hundido;
+    }
+}
+
+Patrullero& Patrullero::operator=(const Patrullero& opDrcha) {
+    hundido = opDrcha.hundido;
+    coordenadaInicial = opDrcha.coordenadaInicial;
+    longitud = opDrcha.longitud;
+    casillasBarco = new Casilla[longitud];
+    for(int i = 0; i < longitud; i++) {
+        casillasBarco[i] = opDrcha.casillasBarco[i];
+    }
+    vertical = opDrcha.vertical;
+    
+    return *this;
+}

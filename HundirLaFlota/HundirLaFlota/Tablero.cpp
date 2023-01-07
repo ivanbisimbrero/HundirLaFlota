@@ -86,6 +86,10 @@ int Tablero::getIntFila(Fila f) {
 }
 
 Tablero& Tablero::operator=(const Tablero& opDrcha) {
-    Tablero aux(opDrcha);
-    return aux;
+    for(int i = 0; i < 10; i++) {
+        for(int j = 0; j < 10; j++) {
+            tablero[i][j] = opDrcha.tablero[i][j];
+        }
+    }
+    return *this;
 }

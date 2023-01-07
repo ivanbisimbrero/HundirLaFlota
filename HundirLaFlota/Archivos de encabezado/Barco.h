@@ -26,6 +26,7 @@ public:
     Barco(Casilla, int, bool);
     Barco(const Barco&);
     virtual bool comprobarHundido() = 0;
+    virtual Casilla getCoordenadaInicial() = 0;
     Barco& operator=(const Barco&);
     void mostrarCasillas();
 };

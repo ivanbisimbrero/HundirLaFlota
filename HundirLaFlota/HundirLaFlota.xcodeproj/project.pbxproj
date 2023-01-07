@@ -88,9 +88,9 @@
 			children = (
 				CC10415D2966156E0035C7AA /* Tablero.cpp */,
 				CC10415B296615690035C7AA /* Casilla.cpp */,
-				CC104159296615630035C7AA /* Barco.cpp */,
 				CC1041522966150D0035C7AA /* main.cpp */,
 				CC06074F2966E006009D29EA /* Jugador.cpp */,
+				CC104159296615630035C7AA /* Barco.cpp */,
 				CC628C2729674F0000B36366 /* Portaaviones.cpp */,
 				CC628C2A29674FB200B36366 /* Acorazado.cpp */,
 				CC628C2D29674FBC00B36366 /* Submarino.cpp */,

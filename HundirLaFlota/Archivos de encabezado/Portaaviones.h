@@ -15,7 +15,10 @@ class Portaaviones : public Barco {
 public:
     Portaaviones();
     Portaaviones(Casilla, bool);
+    Portaaviones(const Portaaviones&);
     bool comprobarHundido();
+    Casilla getCoordenadaInicial() {return coordenadaInicial;}
+    Portaaviones& operator=(const Portaaviones&);
 };
 
 #endif /* Portaaviones_h */
