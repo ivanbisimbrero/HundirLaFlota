@@ -16,9 +16,8 @@ public:
     Acorazado();
     Acorazado(Casilla, bool);
     Acorazado(const Acorazado&);
-    bool comprobarHundido();
-    Casilla getCoordenadaInicial() {return coordenadaInicial;}
     Acorazado& operator=(const Acorazado&);
+    string getType() {return "Acorazado";}
 };
 
 #endif /* Acorazado_h */

@@ -16,9 +16,8 @@ public:
     Portaaviones();
     Portaaviones(Casilla, bool);
     Portaaviones(const Portaaviones&);
-    bool comprobarHundido();
-    Casilla getCoordenadaInicial() {return coordenadaInicial;}
     Portaaviones& operator=(const Portaaviones&);
+    string getType() {return "Portaaviones";}
 };
 
 #endif /* Portaaviones_h */

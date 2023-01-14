@@ -16,9 +16,8 @@ public:
     Buque();
     Buque(Casilla, bool);
     Buque(const Buque&);
-    bool comprobarHundido();
-    Casilla getCoordenadaInicial() {return coordenadaInicial;}
     Buque& operator=(const Buque&);
+    string getType() {return "Buque";}
 };
 
 #endif /* Buque_h */

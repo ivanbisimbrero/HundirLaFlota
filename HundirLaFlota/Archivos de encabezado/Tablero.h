@@ -10,14 +10,20 @@
 
 #include <stdio.h>
 #include "Casilla.h"
+#include "ExcepcionFueraTablero.h"
+#include "ExcepcionMalColocado.h"
 
 class Tablero {
 private:
     Casilla tablero[10][10];
+    bool proximidad(string, Fila, int, bool);
+    bool fueraTablero(string, Fila, int, bool);
+    bool coincideBarco(string, Fila, int, bool);
+    int casillasBarco(string);
+    bool comprobarColocacion(string, Fila, int, bool);
 public:
     Tablero();
     Tablero(const Tablero&);
-    bool comprobarProximidad(string, Fila, int, bool);
     void colocarBarco(string, Fila, int, bool);
     void marcarCoordenada(Fila, int);
     bool comprobarCoordenada(Fila, int);

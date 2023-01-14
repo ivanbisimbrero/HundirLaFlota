@@ -53,6 +53,8 @@
 		CC628C3129674FC600B36366 /* Patrullero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Patrullero.h; sourceTree = "<group>"; };
 		CC628C3329674FD100B36366 /* Buque.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Buque.cpp; sourceTree = "<group>"; };
 		CC628C3429674FD100B36366 /* Buque.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Buque.h; sourceTree = "<group>"; };
+		CC94A48C29732ACC00DBC296 /* ExcepcionFueraTablero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExcepcionFueraTablero.h; sourceTree = "<group>"; };
+		CCC8595D29733BCE00F5C6B4 /* ExcepcionMalColocado.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExcepcionMalColocado.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,8 @@
 				CC628C2E29674FBC00B36366 /* Submarino.h */,
 				CC628C3129674FC600B36366 /* Patrullero.h */,
 				CC628C3429674FD100B36366 /* Buque.h */,
+				CC94A48C29732ACC00DBC296 /* ExcepcionFueraTablero.h */,
+				CCC8595D29733BCE00F5C6B4 /* ExcepcionMalColocado.h */,
 			);
 			path = "Archivos de encabezado";
 			sourceTree = "<group>";

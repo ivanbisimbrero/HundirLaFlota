@@ -59,6 +59,22 @@ Barco::Barco(const Barco& b) {
     vertical = b.vertical;
 }
 
+bool Barco::comprobarHundido() {
+    bool comprobacion = true;
+    for(int i = 0; i < longitud; i++) {
+        if(!(casillasBarco[i].comprobarDisparo())) {
+            comprobacion = false;
+        }
+    }
+    if(comprobacion) {
+        hundido = true;
+        return hundido;
+    }
+    else {
+        return hundido;
+    }
+}
+
 Barco& Barco::operator=(const Barco& opDrcha) {
     hundido = opDrcha.hundido;
     coordenadaInicial = opDrcha.coordenadaInicial;
@@ -76,4 +92,13 @@ void Barco::mostrarCasillas() {
     for(int i = 0; i < longitud; i++) {
         casillasBarco[i].mostrar();
     }
+}
+
+bool Barco::isCasillaInBarco(Fila fila, int columna) {
+    for(int i = 0; i < longitud; i++) {
+        if(casillasBarco[i].getColumna() == columna && casillasBarco[i].getFila() == fila) {
+            return true;
+        }
+    }
+    return false;
 }

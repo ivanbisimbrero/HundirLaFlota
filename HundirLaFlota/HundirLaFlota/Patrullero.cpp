@@ -22,22 +22,6 @@ Patrullero::Patrullero(const Patrullero& p) {
     vertical = p.vertical;
 }
 
-bool Patrullero::comprobarHundido() {
-    bool comprobacion = true;
-    for(int i = 0; i < longitud; i++) {
-        if(!(casillasBarco[i].comprobarDisparo())) {
-            comprobacion = false;
-        }
-    }
-    if(comprobacion) {
-        hundido = true;
-        return hundido;
-    }
-    else {
-        return hundido;
-    }
-}
-
 Patrullero& Patrullero::operator=(const Patrullero& opDrcha) {
     hundido = opDrcha.hundido;
     coordenadaInicial = opDrcha.coordenadaInicial;

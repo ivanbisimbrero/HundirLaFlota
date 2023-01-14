@@ -25,10 +25,12 @@ public:
     Barco();
     Barco(Casilla, int, bool);
     Barco(const Barco&);
-    virtual bool comprobarHundido() = 0;
-    virtual Casilla getCoordenadaInicial() = 0;
+    //TODO: comprobarHundido y getCoordenadaInicial no son polimorfismo
+    bool comprobarHundido();
     Barco& operator=(const Barco&);
     void mostrarCasillas();
+    virtual string getType() = 0;
+    bool isCasillaInBarco(Fila, int);
 };
 
 #endif /* Barco_h */

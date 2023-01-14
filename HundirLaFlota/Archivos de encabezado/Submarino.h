@@ -16,9 +16,8 @@ public:
     Submarino();
     Submarino(Casilla, bool);
     Submarino(const Submarino&);
-    bool comprobarHundido();
-    Casilla getCoordenadaInicial() {return coordenadaInicial;}
     Submarino& operator=(const Submarino&);
+    string getType() {return "Submarino";}
 };
 
 #endif /* Submarino_h */

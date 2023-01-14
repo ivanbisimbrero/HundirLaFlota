@@ -22,22 +22,6 @@ Acorazado::Acorazado(const Acorazado& a) {
     vertical = a.vertical;
 }
 
-bool Acorazado::comprobarHundido() {
-    bool comprobacion = true;
-    for(int i = 0; i < longitud; i++) {
-        if(!(casillasBarco[i].comprobarDisparo())) {
-            comprobacion = false;
-        }
-    }
-    if(comprobacion) {
-        hundido = true;
-        return hundido;
-    }
-    else {
-        return hundido;
-    }
-}
-
 Acorazado& Acorazado::operator=(const Acorazado& opDrcha) {
     hundido = opDrcha.hundido;
     coordenadaInicial = opDrcha.coordenadaInicial;

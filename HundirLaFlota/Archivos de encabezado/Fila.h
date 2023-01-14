@@ -13,6 +13,6 @@
 
 using namespace std;
 
-enum Fila { A = 0, B, C, D, E, F, G, H, I, J };
+enum Fila { A = 0, B, C, D, E, F, G, H, I, J, ERR };
 
 #endif /* Fila_h */

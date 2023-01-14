@@ -22,22 +22,6 @@ Submarino::Submarino(const Submarino& s) {
     vertical = s.vertical;
 }
 
-bool Submarino::comprobarHundido() {
-    bool comprobacion = true;
-    for(int i = 0; i < longitud; i++) {
-        if(!(casillasBarco[i].comprobarDisparo())) {
-            comprobacion = false;
-        }
-    }
-    if(comprobacion) {
-        hundido = true;
-        return hundido;
-    }
-    else {
-        return hundido;
-    }
-}
-
 Submarino& Submarino::operator=(const Submarino& opDrcha) {
     hundido = opDrcha.hundido;
     coordenadaInicial = opDrcha.coordenadaInicial;

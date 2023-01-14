@@ -22,22 +22,6 @@ Buque::Buque(const Buque& b) {
     vertical = b.vertical;
 }
 
-bool Buque::comprobarHundido() {
-    bool comprobacion = true;
-    for(int i = 0; i < longitud; i++) {
-        if(!(casillasBarco[i].comprobarDisparo())) {
-            comprobacion = false;
-        }
-    }
-    if(comprobacion) {
-        hundido = true;
-        return hundido;
-    }
-    else {
-        return hundido;
-    }
-}
-
 Buque& Buque::operator=(const Buque& opDrcha) {
     hundido = opDrcha.hundido;
     coordenadaInicial = opDrcha.coordenadaInicial;

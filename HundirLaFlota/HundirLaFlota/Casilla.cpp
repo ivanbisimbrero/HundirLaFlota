@@ -21,13 +21,6 @@ Casilla::Casilla(int f, int col) {
     coordenadaX = col;
 }
 
-Casilla::Casilla(const Casilla& c) {
-    disparada = c.disparada;
-    hayBarco = c.hayBarco;
-    coordenadaY = c.coordenadaY;
-    coordenadaX = c.coordenadaX;
-}
-
 void Casilla::modificarCoordenadas(int f, int col) {
     coordenadaY = getFila(f);
     coordenadaX = col;
@@ -39,14 +32,6 @@ void Casilla::marcarCasillaDisparada() {
 
 void Casilla::setBarco() {
     hayBarco = true;
-}
-
-Casilla& Casilla::operator=(const Casilla& opDrcha) {
-    disparada = opDrcha.disparada;
-    hayBarco = opDrcha.hayBarco;
-    coordenadaY = opDrcha.coordenadaY;
-    coordenadaX = opDrcha.coordenadaX;
-    return *this;
 }
 
 Fila Casilla::getFila(int num) {
@@ -82,6 +67,8 @@ Fila Casilla::getFila(int num) {
         case 9:
             aux = J;
             break;
+        default:
+            aux = ERR;
     }
     return aux;
 }
@@ -119,9 +106,14 @@ int Casilla::getIntFila() {
         case J:
             aux = 9;
             break;
+        case ERR:
+            aux = 10;
+            break;
     }
     return aux;
 }
+
+
 
 int Casilla::getColumna() {
     return coordenadaX;
@@ -129,4 +121,48 @@ int Casilla::getColumna() {
 
 void Casilla::mostrar() {
     cout << "(" << getIntFila() << " ," << coordenadaX << ")" << endl;
+}
+
+istream& operator>>(istream& is, Casilla& c) {
+    char charFila;
+    cout << "Introduzca la coordenada del eje Y: " << endl;
+    is >> charFila;
+    switch (charFila) {
+        case 'A':
+            c.coordenadaY = A;
+            break;
+        case 'B':
+            c.coordenadaY = B;
+            break;
+        case 'C':
+            c.coordenadaY = C;
+            break;
+        case 'D':
+            c.coordenadaY = D;
+            break;
+        case 'E':
+            c.coordenadaY = E;
+            break;
+        case 'F':
+            c.coordenadaY = F;
+            break;
+        case 'G':
+            c.coordenadaY = G;
+            break;
+        case 'H':
+            c.coordenadaY = H;
+            break;
+        case 'I':
+            c.coordenadaY = I;
+            break;
+        case 'J':
+            c.coordenadaY = J;
+            break;
+        default:
+            c.coordenadaY = ERR;
+            break;
+    }
+    cout << "Introduzca la coordenada del eje X: " << endl;
+    is >> c.coordenadaX;
+    return is;
 }

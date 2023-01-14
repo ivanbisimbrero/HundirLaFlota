@@ -16,9 +16,8 @@ public:
     Patrullero();
     Patrullero(Casilla, bool);
     Patrullero(const Patrullero&);
-    bool comprobarHundido();
-    Casilla getCoordenadaInicial() {return coordenadaInicial;}
     Patrullero& operator=(const Patrullero&);
+    string getType() {return "Patrullero";}
 };
 
 #endif /* Patrullero_h */
