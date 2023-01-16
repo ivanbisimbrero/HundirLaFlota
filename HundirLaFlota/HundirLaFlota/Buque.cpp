@@ -5,7 +5,7 @@
 //  Created by Ivan on 5/1/23.
 //
 
-#include "Buque.h"
+#include "Buque.hpp"
 
 Buque::Buque() : Barco(Casilla(0,1), 1, true) {}
 

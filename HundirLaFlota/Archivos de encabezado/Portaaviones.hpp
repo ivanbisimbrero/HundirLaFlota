@@ -1,15 +1,15 @@
 //
-//  Portaaviones.h
+//  Portaaviones.hpp
 //  HundirLaFlota
 //
 //  Created by Ivan on 5/1/23.
 //
 
-#ifndef Portaaviones_h
-#define Portaaviones_h
+#ifndef Portaaviones_hpp
+#define Portaaviones_hpp
 
 #include <stdio.h>
-#include "Barco.h"
+#include "Barco.hpp"
 
 class Portaaviones : public Barco {
 public:
@@ -20,4 +20,4 @@ public:
     string getType() {return "Portaaviones";}
 };
 
-#endif /* Portaaviones_h */
+#endif /* Portaaviones_hpp */

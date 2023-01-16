@@ -5,8 +5,8 @@
 //  Created by Ivan on 14/1/23.
 //
 
-#ifndef ExcepcionFueraTablero_h
-#define ExcepcionFueraTablero_h
+#ifndef ExcepcionFueraTablero_hpp
+#define ExcepcionFueraTablero_hpp
 #include <stdio.h>
 #include <stdexcept>
 
@@ -17,4 +17,4 @@ public:
     ExcepcionFueraTablero() : out_of_range("Excepcion: coordenada introducida fuera del tablero") {}
 };
 
-#endif /* ExcepcionFueraTablero_h */
+#endif /* ExcepcionFueraTablero_hpp */

@@ -1,15 +1,15 @@
 //
-//  Casilla.h
+//  Casilla.hpp
 //  HundirLaFlota
 //
 //  Created by Ivan on 4/1/23.
 //
 
-#ifndef Casilla_h
-#define Casilla_h
+#ifndef Casilla_hpp
+#define Casilla_hpp
 
 #include <stdio.h>
-#include "Fila.h"
+#include "Fila.hpp"
 
 using namespace std;
 
@@ -23,10 +23,10 @@ public:
     Casilla();
     Casilla(int, int);
     void modificarCoordenadas(int, int);
-    bool comprobarOcupacion() {return hayBarco;}
+    bool comprobarOcupacion();
     void marcarCasillaDisparada();
     void setBarco();
-    bool comprobarDisparo() {return disparada;}
+    bool comprobarDisparo();
     Fila getFila(int);
     int getIntFila();
     int getColumna();
@@ -36,4 +36,4 @@ public:
     friend ostream& operator<<(ostream&, Casilla&);
 };
  
-#endif /* Casilla_h */
+#endif /* Casilla_hpp */

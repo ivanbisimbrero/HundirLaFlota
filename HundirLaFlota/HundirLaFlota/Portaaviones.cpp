@@ -5,7 +5,7 @@
 //  Created by Ivan on 5/1/23.
 //
 
-#include "Portaaviones.h"
+#include "Portaaviones.hpp"
 
 Portaaviones::Portaaviones() : Barco(Casilla(0,1), 5, true) {}
 

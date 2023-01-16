@@ -5,7 +5,7 @@
 //  Created by Ivan on 5/1/23.
 //
 
-#include "Patrullero.h"
+#include "Patrullero.hpp"
 
 Patrullero::Patrullero() : Barco(Casilla(0,1), 2, true) {}
 

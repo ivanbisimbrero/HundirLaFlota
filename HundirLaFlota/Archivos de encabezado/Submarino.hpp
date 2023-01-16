@@ -1,15 +1,15 @@
 //
-//  Submarino.h
+//  Submarino.hpp
 //  HundirLaFlota
 //
 //  Created by Ivan on 5/1/23.
 //
 
-#ifndef Submarino_h
-#define Submarino_h
+#ifndef Submarino_hpp
+#define Submarino_hpp
 
 #include <stdio.h>
-#include "Barco.h"
+#include "Barco.hpp"
 
 class Submarino : public Barco {
 public:
@@ -20,4 +20,4 @@ public:
     string getType() {return "Submarino";}
 };
 
-#endif /* Submarino_h */
+#endif /* Submarino_hpp */

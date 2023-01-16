@@ -1,12 +1,12 @@
 //
-//  ExcepcionMalColocado.h
+//  ExcepcionMalColocado.hpp
 //  HundirLaFlota
 //
 //  Created by Ivan on 14/1/23.
 //
 
-#ifndef ExcepcionMalColocado_h
-#define ExcepcionMalColocado_h
+#ifndef ExcepcionMalColocado_hpp
+#define ExcepcionMalColocado_hpp
 #include <stdio.h>
 #include <stdexcept>
 
@@ -18,4 +18,4 @@ public:
 };
 
 
-#endif /* ExcepcionMalColocado_h */
+#endif /* ExcepcionMalColocado_hpp */

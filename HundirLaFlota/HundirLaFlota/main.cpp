@@ -6,16 +6,14 @@
 //
 
 #include <iostream>
-#include "Tablero.h"
-#include "Jugador.h"
+#include "Partida.hpp"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    
-    Tablero miTablero;
-    Casilla aux(1, 2);
-    //Barco prueba(aux, 4, true);
+    //Casilla aux(6, 3);
+    //Buque prueba(aux, true);
     //prueba.mostrarCasillas();
+    /*
     try {
         miTablero.colocarBarco("Submarino", A, 7, false);
         miTablero.colocarBarco("Buque", B, 5, false);
@@ -24,9 +22,11 @@ int main(int argc, const char * argv[]) {
     } catch(ExcepcionFueraTablero& ex) {
         cout << ex.what() << endl;
     }
+     */
     //cout << "Buenas tardes" << endl;
     //cin >> aux;
-    Jugador miOscar;
-    miOscar.colocarBarcos();
+    Partida hundirLaFlota;
+    hundirLaFlota.iniciarPartida();
+    hundirLaFlota.disparar();
     return 0;
 }

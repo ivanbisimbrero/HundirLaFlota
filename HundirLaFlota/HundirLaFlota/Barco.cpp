@@ -5,7 +5,7 @@
 //  Created by Ivan on 4/1/23.
 //
 
-#include "Barco.h"
+#include "Barco.hpp"
 Barco::Barco() {
     hundido = false;
     coordenadaInicial = Casilla(0, 1);
@@ -26,24 +26,14 @@ Barco::Barco(Casilla ini, int lon, bool vert) {
     int fila = coordenadaInicial.getIntFila(), columna = coordenadaInicial.getColumna();
     if(vertical) {
         for(int i = 0; i < longitud; i++) {
-            if(fila + i < 9) {
-                casillasBarco[i] = Casilla(fila + i, columna);
-                casillasBarco[i].setBarco();
-            }
-            else {
-                //TODO: lanza excepcion de que se ha salido del tablero
-            }
+            casillasBarco[i] = Casilla(fila + i, columna);
+            casillasBarco[i].setBarco();
         }
     }
     else {
         for(int i = 0; i < longitud; i++) {
-            if(columna + i < 10) {
-                casillasBarco[i] = Casilla(fila, columna + i);
-                casillasBarco[i].setBarco();
-            }
-            else {
-                //TODO: lanza excepcion de que se ha salido del tablero
-            }
+            casillasBarco[i] = Casilla(fila, columna + i);
+            casillasBarco[i].setBarco();
         }
     }
 }
@@ -101,4 +91,14 @@ bool Barco::isCasillaInBarco(Fila fila, int columna) {
         }
     }
     return false;
+}
+
+void Barco::marcarCoordenada(Fila fila, int columna) {
+    if(isCasillaInBarco(fila, columna)) {
+        for(int i = 0; i < longitud; i++) {
+            if(casillasBarco[i].getFila() == fila && casillasBarco[i].getColumna() == columna) {
+                casillasBarco[i].marcarCasillaDisparada();
+            }
+        }
+    }
 }

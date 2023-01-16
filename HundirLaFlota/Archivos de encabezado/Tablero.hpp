@@ -1,17 +1,17 @@
 //
-//  Tablero.h
+//  Tablero.hpp
 //  HundirLaFlota
 //
 //  Created by Ivan on 4/1/23.
 //
 
-#ifndef Tablero_h
-#define Tablero_h
+#ifndef Tablero_hpp
+#define Tablero_hpp
 
 #include <stdio.h>
-#include "Casilla.h"
-#include "ExcepcionFueraTablero.h"
-#include "ExcepcionMalColocado.h"
+#include "Casilla.hpp"
+#include "ExcepcionFueraTablero.hpp"
+#include "ExcepcionMalColocado.hpp"
 
 class Tablero {
 private:
@@ -30,7 +30,9 @@ public:
     bool comprobarDisparo(Fila, int);
     int getIntFila(Fila);
     Tablero& operator=(const Tablero&);
+    void establecerTocado(Fila, int);
+    void mostrarTablero();
 };
 
 
-#endif /* Tablero_h */
+#endif /* Tablero_hpp */

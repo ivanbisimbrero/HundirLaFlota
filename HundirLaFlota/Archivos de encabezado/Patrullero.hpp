@@ -1,15 +1,15 @@
 //
-//  Patrullero.h
+//  Patrullero.hpp
 //  HundirLaFlota
 //
 //  Created by Ivan on 5/1/23.
 //
 
-#ifndef Patrullero_h
-#define Patrullero_h
+#ifndef Patrullero_hpp
+#define Patrullero_hpp
 
 #include <stdio.h>
-#include "Barco.h"
+#include "Barco.hpp"
 
 class Patrullero : public Barco {
 public:
@@ -20,4 +20,4 @@ public:
     string getType() {return "Patrullero";}
 };
 
-#endif /* Patrullero_h */
+#endif /* Patrullero_hpp */

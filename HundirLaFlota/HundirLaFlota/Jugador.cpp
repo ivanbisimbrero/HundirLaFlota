@@ -5,7 +5,7 @@
 //  Created by Ivan on 5/1/23.
 //
 
-#include "Jugador.h"
+#include "Jugador.hpp"
 
 Jugador::Jugador() {
     turno = false;
@@ -29,9 +29,10 @@ Jugador::Jugador() {
                 break;
         }
     }
+    identifier = 0;
 }
 
-Jugador::Jugador(const Jugador& j){
+Jugador::Jugador(const Jugador& j) {
     turno = j.turno;
     tablerosJugador = new Tablero[2];
     for(int i = 0; i < 2; i++) {
@@ -40,6 +41,7 @@ Jugador::Jugador(const Jugador& j){
     for(int i = 0; i < 5; i++) {
         barcos[i] = j.barcos[i];
     }
+    identifier = j.identifier;
 }
 
 Jugador& Jugador::operator=(const Jugador& opDrcha) {
@@ -51,7 +53,12 @@ Jugador& Jugador::operator=(const Jugador& opDrcha) {
     for(int i = 0; i < 5; i++) {
         barcos[i] = opDrcha.barcos[i];
     }
+    identifier = opDrcha.identifier;
     return *this;
+}
+
+void Jugador::setId(int id) {
+    identifier = id;
 }
 
 bool Jugador::comprobarBarcos() {
@@ -70,6 +77,10 @@ void Jugador::disparar(Fila fila, int columna) {
     }
     else {
         if(!(tablerosJugador[0].comprobarDisparo(fila, columna))) {
+            tablerosJugador[0].marcarCoordenada(fila, columna);
+            for(int i = 0; i < 5; i++) {
+                barcos[i]->marcarCoordenada(fila, columna);
+            }
             if(tablerosJugador[0].comprobarCoordenada(fila, columna)) {
                 cout << "Tocado";
                 
@@ -90,7 +101,6 @@ void Jugador::disparar(Fila fila, int columna) {
             else {
                 cout << "Agua" << endl;
             }
-            tablerosJugador[0].marcarCoordenada(fila, columna);
         }
         else {
             cout << "La coordenada introducida ya ha sido disparada, intentelo de nuevo." << endl;
@@ -98,8 +108,11 @@ void Jugador::disparar(Fila fila, int columna) {
     }
 }
 
-void Jugador::marcarCasilla(Fila fila, int columna) {
+void Jugador::marcarCasilla(Fila fila, int columna, bool tocado) {
     tablerosJugador[1].marcarCoordenada(fila, columna);
+    if(tocado) {
+        tablerosJugador[1].establecerTocado(fila, columna);
+    }
 }
 
 void Jugador::setTurno(bool turno) {
@@ -118,37 +131,36 @@ bool Jugador::comprobarDatos(char datoIntroducido) {
 }
 
 void Jugador::colocarBarcos() {
-    bool colocados = false;
+    bool colocados = false, orientacion;
     int counter = 0;
-    Casilla aux;
-    bool orientacion;
-    char iOrientacion;
+    Casilla casillaAux;
+    char cOrientacion;
     while(!colocados) {
-        cout << "Coordenadas del ";
-        cout << barcos[counter]->getType() << endl;
+        //TODO: mostrar tablero --> hacer en windows
+        cout << "Jugador " << identifier << " introduzca las coordenadas del " << barcos[counter]->getType() << endl;
         cout << "A continuacion tendra que introducir la coordenada inicial que desee: " << endl;
-        cin >> aux;
+        cin >> casillaAux;
         cout << "Quieres colocarlo horizontalmente(0) o verticalmente(1): " << endl;
-        cin >> iOrientacion;
+        cin >> cOrientacion;
         try {
-            orientacion = comprobarDatos(iOrientacion);
+            orientacion = comprobarDatos(cOrientacion);
             try {
-                tablerosJugador[0].colocarBarco(barcos[counter]->getType(), aux.getFila(), aux.getColumna(), orientacion);
+                tablerosJugador[0].colocarBarco(barcos[counter]->getType(), casillaAux.getFila(), casillaAux.getColumna(), orientacion);
                 switch (counter) {
                     case 0:
-                        barcos[counter] = new Portaaviones(aux, orientacion);
+                        barcos[counter] = new Portaaviones(casillaAux, orientacion);
                         break;
                     case 1:
-                        barcos[counter] = new Acorazado(aux, orientacion);
+                        barcos[counter] = new Acorazado(casillaAux, orientacion);
                         break;
                     case 2:
-                        barcos[counter] = new Submarino(aux, orientacion);
+                        barcos[counter] = new Submarino(casillaAux, orientacion);
                         break;
                     case 3:
-                        barcos[counter] = new Patrullero(aux, orientacion);
+                        barcos[counter] = new Patrullero(casillaAux, orientacion);
                         break;
                     case 4:
-                        barcos[counter] = new Buque(aux, orientacion);
+                        barcos[counter] = new Buque(casillaAux, orientacion);
                         break;
                 }
                 counter++;
@@ -163,5 +175,13 @@ void Jugador::colocarBarcos() {
         if(counter == 5) {
             colocados = true;
         }
+        //TODO: Add system cls in windows
     }
+    
+}
+
+bool Jugador::isTocado(Casilla c) {
+    if(tablerosJugador[0].comprobarDisparo(c.getFila(), c.getColumna()) &&
+       tablerosJugador[0].comprobarCoordenada(c.getFila(), c.getColumna())) {return true;}
+    else {return false;}
 }

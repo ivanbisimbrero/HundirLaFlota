@@ -5,7 +5,7 @@
 //  Created by Ivan on 5/1/23.
 //
 
-#include "Acorazado.h"
+#include "Acorazado.hpp"
 
 Acorazado::Acorazado() : Barco(Casilla(0,1), 4, true) {}
 

@@ -5,12 +5,12 @@
 //  Created by Ivan on 4/1/23.
 //
 
-#ifndef Barco_h
-#define Barco_h
+#ifndef Barco_hpp
+#define Barco_hpp
 
 #include <stdio.h>
 #include <iostream>
-#include "Casilla.h"
+#include "Casilla.hpp"
 
 using namespace std;
 
@@ -25,12 +25,12 @@ public:
     Barco();
     Barco(Casilla, int, bool);
     Barco(const Barco&);
-    //TODO: comprobarHundido y getCoordenadaInicial no son polimorfismo
     bool comprobarHundido();
     Barco& operator=(const Barco&);
     void mostrarCasillas();
     virtual string getType() = 0;
     bool isCasillaInBarco(Fila, int);
+    void marcarCoordenada(Fila, int);
 };
 
 #endif /* Barco_h */

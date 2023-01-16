@@ -5,7 +5,7 @@
 //  Created by Ivan on 4/1/23.
 //
 
-#include "Casilla.h"
+#include "Casilla.hpp"
 
 Casilla::Casilla() {
     disparada = false;
@@ -26,12 +26,20 @@ void Casilla::modificarCoordenadas(int f, int col) {
     coordenadaX = col;
 }
 
+bool Casilla::comprobarOcupacion() {
+    return hayBarco;
+}
+
 void Casilla::marcarCasillaDisparada() {
     disparada = true;
 }
 
 void Casilla::setBarco() {
     hayBarco = true;
+}
+
+bool Casilla::comprobarDisparo() {
+    return disparada;
 }
 
 Fila Casilla::getFila(int num) {
@@ -129,33 +137,43 @@ istream& operator>>(istream& is, Casilla& c) {
     is >> charFila;
     switch (charFila) {
         case 'A':
+        case 'a':
             c.coordenadaY = A;
             break;
         case 'B':
+        case 'b':
             c.coordenadaY = B;
             break;
         case 'C':
+        case 'c':
             c.coordenadaY = C;
             break;
         case 'D':
+        case 'd':
             c.coordenadaY = D;
             break;
         case 'E':
+        case 'e':
             c.coordenadaY = E;
             break;
         case 'F':
+        case 'f':
             c.coordenadaY = F;
             break;
         case 'G':
+        case 'g':
             c.coordenadaY = G;
             break;
         case 'H':
+        case 'h':
             c.coordenadaY = H;
             break;
         case 'I':
+        case 'i':
             c.coordenadaY = I;
             break;
         case 'J':
+        case 'j':
             c.coordenadaY = J;
             break;
         default:
@@ -165,4 +183,24 @@ istream& operator>>(istream& is, Casilla& c) {
     cout << "Introduzca la coordenada del eje X: " << endl;
     is >> c.coordenadaX;
     return is;
+}
+
+ostream& operator<<(ostream& os, Casilla& c) {
+    if(c.comprobarOcupacion()) {
+        if(c.comprobarDisparo()) {
+            os << "+ ";
+        }
+        else {
+            os << "# ";
+        }
+    }
+    else {
+        if(c.comprobarDisparo()) {
+            os << "x ";
+        }
+        else {
+            os << "* ";
+        }
+    }
+    return os;
 }

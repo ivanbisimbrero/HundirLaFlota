@@ -5,7 +5,7 @@
 //  Created by Ivan on 4/1/23.
 //
 
-#include "Tablero.h"
+#include "Tablero.hpp"
 
 Tablero::Tablero() {
     for(int i = 0; i < 10; i++) {
@@ -37,31 +37,6 @@ int Tablero::casillasBarco(string tipoBarco) {
         casillas = 1;
     }
     return casillas;
-}
-
-bool Tablero::comprobarColocacion(string tipoBarco, Fila coordIniY, int CoordIniX, bool vertical) {
-    return (proximidad(tipoBarco, coordIniY, CoordIniX, vertical) || coincideBarco(tipoBarco, coordIniY, CoordIniX, vertical));
-}
-
-void Tablero::colocarBarco(string tipoBarco, Fila coordIniY, int CoordIniX, bool vertical) {
-    if(fueraTablero(tipoBarco, coordIniY, CoordIniX, vertical)) {
-        throw ExcepcionFueraTablero();
-    }
-    else if(comprobarColocacion(tipoBarco, coordIniY, CoordIniX, vertical)) {
-        throw ExcepcionMalColocado();
-    }
-    else {
-        int casillas = casillasBarco(tipoBarco);
-        if(vertical) {
-            for(int i = 0; i < casillas; i++) {
-                tablero[getIntFila(coordIniY) + i][CoordIniX - 1].setBarco();
-            }
-        } else {
-            for(int i = 0; i < casillas; i++) {
-                tablero[getIntFila(coordIniY)][CoordIniX + i - 1].setBarco();
-            }
-        }
-    }
 }
 
 void Tablero::marcarCoordenada(Fila f, int col) {
@@ -129,8 +104,9 @@ Tablero& Tablero::operator=(const Tablero& opDrcha) {
 }
 
 bool Tablero::fueraTablero(string tipoBarco, Fila coordIniY, int CoordIniX, bool vertical) {
+    if(coordIniY == ERR || (CoordIniX-1) < 0 || (CoordIniX-1) > 10) {return true;}
     bool fuera = false;
-    int casillas = casillasBarco(tipoBarco);
+    int casillas = casillasBarco(tipoBarco)-1;
     if(vertical) {
         if(getIntFila(coordIniY)+casillas > 9) {
             fuera = true;
@@ -145,7 +121,6 @@ bool Tablero::fueraTablero(string tipoBarco, Fila coordIniY, int CoordIniX, bool
 }
 
 bool Tablero::coincideBarco(string tipoBarco, Fila coordIniY, int CoordIniX, bool vertical) {
-    if(fueraTablero(tipoBarco, coordIniY, CoordIniX, vertical)) {return true;}
     bool coincide = false;
     int casillas = casillasBarco(tipoBarco);
     if(vertical) {
@@ -166,7 +141,6 @@ bool Tablero::coincideBarco(string tipoBarco, Fila coordIniY, int CoordIniX, boo
 }
 
 bool Tablero::proximidad(string tipoBarco, Fila coordIniY, int CoordIniX, bool vertical) {
-    if(fueraTablero(tipoBarco, coordIniY, CoordIniX, vertical)) {return true;}
     bool proximo = false;
     int casillas = casillasBarco(tipoBarco);
     int iteracionesY = 0, iteracionesX = 0, coordActualY = 0, coordActualX = 0;
@@ -202,4 +176,34 @@ bool Tablero::proximidad(string tipoBarco, Fila coordIniY, int CoordIniX, bool v
     }
     
     return proximo;
+}
+
+bool Tablero::comprobarColocacion(string tipoBarco, Fila coordIniY, int CoordIniX, bool vertical) {
+    return (proximidad(tipoBarco, coordIniY, CoordIniX, vertical) || coincideBarco(tipoBarco, coordIniY, CoordIniX, vertical));
+}
+
+void Tablero::colocarBarco(string tipoBarco, Fila coordIniY, int CoordIniX, bool vertical) {
+    if(fueraTablero(tipoBarco, coordIniY, CoordIniX, vertical)) {
+        throw ExcepcionFueraTablero();
+    }
+    else if(comprobarColocacion(tipoBarco, coordIniY, CoordIniX, vertical)) {
+        throw ExcepcionMalColocado();
+    }
+    else {
+        int casillas = casillasBarco(tipoBarco);
+        if(vertical) {
+            for(int i = 0; i < casillas; i++) {
+                tablero[getIntFila(coordIniY) + i][CoordIniX - 1].setBarco();
+            }
+        } else {
+            for(int i = 0; i < casillas; i++) {
+                tablero[getIntFila(coordIniY)][CoordIniX + i - 1].setBarco();
+            }
+        }
+    }
+}
+
+void Tablero::establecerTocado(Fila fila, int columna) {
+    //Para ello, haremos como si en esa casilla hubiera un barco
+    tablero[getIntFila(fila)][columna-1].setBarco();
 }

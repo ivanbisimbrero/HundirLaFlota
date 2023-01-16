@@ -5,7 +5,7 @@
 //  Created by Ivan on 5/1/23.
 //
 
-#include "Submarino.h"
+#include "Submarino.hpp"
 
 Submarino::Submarino() : Barco(Casilla(0,1), 3, true) {}
 

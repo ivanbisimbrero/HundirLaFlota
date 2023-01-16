@@ -5,11 +5,11 @@
 //  Created by Ivan on 5/1/23.
 //
 
-#ifndef Buque_h
-#define Buque_h
+#ifndef Buque_hpp
+#define Buque_hpp
 
 #include <stdio.h>
-#include "Barco.h"
+#include "Barco.hpp"
 
 class Buque : public Barco {
 public:
@@ -20,4 +20,4 @@ public:
     string getType() {return "Buque";}
 };
 
-#endif /* Buque_h */
+#endif /* Buque_hpp */
