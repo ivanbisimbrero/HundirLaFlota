@@ -136,7 +136,7 @@ void Jugador::colocarBarcos() {
     Casilla casillaAux;
     char cOrientacion;
     while(!colocados) {
-        //TODO: mostrar tablero --> hacer en windows
+        tablerosJugador[0].mostrarTablero();
         cout << "Jugador " << identifier << " introduzca las coordenadas del " << barcos[counter]->getType() << endl;
         cout << "A continuacion tendra que introducir la coordenada inicial que desee: " << endl;
         cin >> casillaAux;

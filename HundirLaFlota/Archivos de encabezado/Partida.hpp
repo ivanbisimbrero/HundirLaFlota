@@ -15,8 +15,7 @@ class Partida {
 private:
     bool partidaEnCurso;
     bool pause;
-    Jugador j1;
-    Jugador j2;
+    Jugador * jugadores;
 public:
     Partida();
     Partida(const Partida&);
@@ -25,8 +24,10 @@ public:
     void cargarPartida();
     void guardarPartida();
     void disparar();
+    void setPause(bool);
     void abandonar();
     void salirPartida();
+    void juego();
 };
 
 #endif /* Partida_hpp */

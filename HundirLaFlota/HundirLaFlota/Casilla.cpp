@@ -188,18 +188,18 @@ istream& operator>>(istream& is, Casilla& c) {
 ostream& operator<<(ostream& os, Casilla& c) {
     if(c.comprobarOcupacion()) {
         if(c.comprobarDisparo()) {
-            os << "+ ";
+            os << "+  ";
         }
         else {
-            os << "# ";
+            os << "#  ";
         }
     }
     else {
         if(c.comprobarDisparo()) {
-            os << "x ";
+            os << "x  ";
         }
         else {
-            os << "* ";
+            os << "*  ";
         }
     }
     return os;

@@ -207,3 +207,53 @@ void Tablero::establecerTocado(Fila fila, int columna) {
     //Para ello, haremos como si en esa casilla hubiera un barco
     tablero[getIntFila(fila)][columna-1].setBarco();
 }
+
+char Tablero::letraFila(int num) {
+    char fila;
+    char aux = '\0';
+    switch (num) {
+        case 0:
+            aux = 'A';
+            break;
+        case 1:
+            aux = 'B';
+            break;
+        case 2:
+            aux = 'C';
+            break;
+        case 3:
+            aux = 'D';
+            break;
+        case 4:
+            aux = 'E';
+            break;
+        case 5:
+            aux = 'F';
+            break;
+        case 6:
+            aux = 'G';
+            break;
+        case 7:
+            aux = 'H';
+            break;
+        case 8:
+            aux = 'I';
+            break;
+        case 9:
+            aux = 'J';
+            break;
+    }
+    return aux;
+}
+
+void Tablero::mostrarTablero() {
+    cout << "   1  2  3  4  5  6  7  8  9  10" << endl;
+    for(int i = 0; i < 10; i++) {
+        cout << letraFila(i) << "  ";
+        for(int j = 0; j < 10; j++) {
+            cout << tablero[i][j];
+        }
+        cout << endl;
+    }
+    cout << endl;
+}

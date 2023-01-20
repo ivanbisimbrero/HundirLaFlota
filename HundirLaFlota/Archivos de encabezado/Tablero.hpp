@@ -31,6 +31,7 @@ public:
     int getIntFila(Fila);
     Tablero& operator=(const Tablero&);
     void establecerTocado(Fila, int);
+    char letraFila(int);
     void mostrarTablero();
 };
 

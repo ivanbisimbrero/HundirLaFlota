@@ -26,7 +26,6 @@ int main(int argc, const char * argv[]) {
     //cout << "Buenas tardes" << endl;
     //cin >> aux;
     Partida hundirLaFlota;
-    hundirLaFlota.iniciarPartida();
-    hundirLaFlota.disparar();
+    hundirLaFlota.juego();
     return 0;
 }
